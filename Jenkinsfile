@@ -15,8 +15,9 @@ pipeline {
     steps { 
       sh 'printenv'
      }  
- 
+} 
    stage ( 'Cowsay') {
+     steps {
       sh 'cowsay ${env.GIT_BRANCH}'
     }
   }
