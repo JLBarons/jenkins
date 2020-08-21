@@ -17,7 +17,7 @@ pipeline {
       sh 'printenv'
       sh "rm -rf /tmp/${username}"
       dir("./${username}") {
-         sh "python setup.py install --prefix=/tmp/${username}"
+         sh "python setup.py build"
         }
      }  
 } 
