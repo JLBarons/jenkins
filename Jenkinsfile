@@ -13,7 +13,7 @@ pipeline {
    stage ('Build') {
     steps { 
        dir('fortune') {
-          sh 'python setup.py install --prefix=../fortune_bin'
+          sh 'python3 setup.py install --prefix=../fortune_bin'
          }
 
        }
