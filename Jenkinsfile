@@ -4,7 +4,9 @@ pipeline {
   stages {
     stage (‘Git’) {
       steps {
-      sh 'git clone https://github.com/bmc/fortune.git' 
+     sh 'rm -rf fortune'
+     sh 'rm -rf fortune_bin'
+     sh 'git clone https://github.com/bmc/fortune.git' 
 
      }
   }
