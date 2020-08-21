@@ -13,7 +13,7 @@ pipeline {
 
 
    stage ('Build') {
-     username = 'builduser'
+     def username = 'builduser'
     steps { 
       sh 'printenv'
       sh "rm -rf /tmp/${username}"
