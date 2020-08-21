@@ -4,9 +4,8 @@ pipeline {
   stages {
     stage (‘Git’) {
       steps {
-        def myname = "JENKINS"
-	echo "Building repo for ${myname}"
-     }
+        echo "RUnning ${env.BUILD_ID} on ${env.JENKINS_URL}"
+    }
   }
 }
 
