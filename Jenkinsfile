@@ -4,14 +4,14 @@ pipeline {
   stages {
     stage (‘Git’) {
       steps {
-       sh ‘mkdir cowpy’
-       sh ‘pip install --install-option="--prefix=cowpy" cowsay’
-  }
+        def myname = "JENKINS"
+	echo "Building repo for ${myname}"
+ }
 }
     stage (‘Build’) {
       steps {
        //Build the contents of repo
-      sh 'cowsay test'
+      
      }
 }
 
