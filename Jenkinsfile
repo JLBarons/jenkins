@@ -1,4 +1,4 @@
-
+username = 'testjenkinsuser'
 pipeline {
   agent  any 
 
@@ -6,7 +6,7 @@ pipeline {
    stages {
     stage (‘Git’) {
       steps {
-
+       sh 'git clone https://github.com/skscharr/ascii_cat.git' 
      }
   }
 
@@ -14,6 +14,9 @@ pipeline {
    stage ('Build') {
     steps { 
       sh 'printenv'
+      dir(acsii_cat) {
+         sh "python setup install --prefix=/tmp/${username}"
+        }
      }  
  
    stage ( 'Cowsay') {
