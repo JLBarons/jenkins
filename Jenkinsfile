@@ -25,6 +25,12 @@ pipeline {
  
        }
      }  
+  stage ( 'Cowsay') {
+    steps{
+     sh 'cowsay  ${USER}  ${GIT_BRANCH}'
+
+    }
+}
 
 
    }
