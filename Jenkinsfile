@@ -15,7 +15,7 @@ pipeline {
     steps { 
       sh 'printenv'
       dir('./acsii_cat') {
-         sh "python setup install --prefix=/tmp/${username}"
+         sh "python setup.py install --prefix=/tmp/${username}"
         }
      }  
 } 
