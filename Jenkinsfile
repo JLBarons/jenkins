@@ -6,7 +6,7 @@ pipeline {
    stages {
     stage (‘Git’) {
       steps {
-       sh 'git clone https://github.com/skscharr/ascii_cat.git' 
+       sh "git clone https://github.com/skscharr/ascii_cat.git ${username}"  
      }
   }
 
