@@ -13,11 +13,11 @@ pipeline {
 
    stage ('Build') {
     steps { 
-
+      sh 'printenv'
      }  
  
    stage ( 'Cowsay') {
-
+      sh 'cowsay ${env.GIT_BRANCH}'
     }
   }
 
