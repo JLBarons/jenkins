@@ -1,10 +1,9 @@
 pipeline {
   agent  any 
 
-  environment {
    username = "Jenkins USER"
-  }
-  stages {
+ 
+   stages {
     stage (‘Git’) {
       steps {
      sh 'rm -rf fortune'
