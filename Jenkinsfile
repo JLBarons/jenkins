@@ -4,17 +4,19 @@ pipeline {
   stages {
     stage (‘Git’) {
       steps {
-      sh 'printenv'
-      echo "RUnning ${env.BUILD_ID} on ${env.JENKINS_URL} branch ${env.GIT_BRANCH}"
-    }
+      sh 'git clone https://github.com/bmc/fortune.git' 
+
+     }
   }
 
 
-   stage ('Stage2') {
+   stage ('Build') {
     steps { 
-     username = "Jenkins User"
-     sh "echo hello ${username}"
-        }
+       dir('fortune') {
+          sh 'python setup.py install --prefix=../fortune_bin'
+         }
+
+       }
      }  
 
 
