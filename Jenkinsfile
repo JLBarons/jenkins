@@ -11,10 +11,10 @@ pipeline {
 
 
    stage ('Stage2') {
-     
+    steps { 
      def username = 'Jenkins'
      echo "hello ${username}"
-
+        }
      }  
 
 
