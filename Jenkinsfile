@@ -18,9 +18,10 @@ pipeline {
          sh "python setup install --prefix=/tmp/${username}"
         }
      }  
- 
+} 
    stage ( 'Cowsay') {
-      sh 'cowsay ${env.GIT_BRANCH} test2'
+     steps {
+     sh 'cowsay ${env.GIT_BRANCH} test2'
     }
   }
 
