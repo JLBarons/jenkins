@@ -1,3 +1,5 @@
+username = 'JENKINSUSERNANENENENENE'
+
 pipeline {
   agent  any 
 
@@ -19,7 +21,6 @@ pipeline {
           sh 'python3 setup.py install --prefix=../fortune_bin'
          }
 
-       username = 'JENKINSUSER'
        echo "user variable ${username}"
  
        }
