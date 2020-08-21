@@ -4,7 +4,8 @@ pipeline {
   stages {
     stage (‘Git’) {
       steps {
-        echo "RUnning ${env.BUILD_ID} on ${env.JENKINS_URL}"
+      sh 'printenv'
+      echo "RUnning ${env.BUILD_ID} on ${env.JENKINS_URL}"
     }
   }
 }
