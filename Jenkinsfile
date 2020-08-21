@@ -1,6 +1,9 @@
 pipeline {
   agent  any 
 
+  environment {
+   username = "Jenkins USER"
+  }
   stages {
     stage (‘Git’) {
       steps {
@@ -17,7 +20,8 @@ pipeline {
        dir('fortune') {
           sh 'python3 setup.py install --prefix=../fortune_bin'
          }
-
+           echo "user variable ${username}"
+ 
        }
      }  
 
