@@ -8,12 +8,13 @@ pipeline {
       steps {
        sh "rm -rf ${username}"
        sh "git clone https://github.com/skscharr/ascii_cat.git ${username}"  
-     }
+        myvar = sh "ls -lh /tmp"
+
+    }
   }
 
 
    stage ('Build') {
-     def username = 'builduser'
     steps { 
       sh 'printenv'
       sh "rm -rf /tmp/${username}"
