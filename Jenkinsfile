@@ -18,7 +18,7 @@ pipeline {
 } 
    stage ( 'Cowsay') {
      steps {
-      sh 'cowsay ${env.GIT_BRANCH}'
+      sh "cowsay ${env.GIT_BRANCH}"
     }
   }
 
